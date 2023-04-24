@@ -1,5 +1,21 @@
 const Header = (title, date, temp) => {
-  // TASK 1
+  const headDivTag = document.createElement('div');
+    headDivTag.classList.add('header');
+  const dateSpanTag = document.createElement('span');
+    dateSpanTag.classList.add('date');
+    dateSpanTag.textContent = date;
+    headDivTag.appendChild(dateSpanTag);
+  const titleH1Tag = document.createElement('h1');
+    titleH1Tag.textContent = title;
+    headDivTag.appendChild(titleH1Tag);
+  const tempSpanTag = document.createElement('span');
+    tempSpanTag.classList.add('temp');
+    tempSpanTag.textContent = temp;
+    headDivTag.appendChild(tempSpanTag);
+  
+  return headDivTag;
+}  
+// TASK 1
   // ---------------------
   // Implement this function taking `title`, `date` and `temp` as its 3 args and returning the markup below.
   // The html tags used, the hierarchy of elements and their attributes must match the provided markup exactly!
@@ -11,9 +27,12 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-}
+
 
 const headerAppender = (selector) => {
+  const selElem = document.querySelector(selector);
+  
+}
   // TASK 2
   // ---------------------
   // Implement this function taking a css selector as its only argument.
@@ -26,6 +45,6 @@ const headerAppender = (selector) => {
   // We are taking care of passing in the correct selector on line 16,
   // so all that you need to do is pass it into the querySelector method
   // for the tests to work!
-}
+
 
 export { Header, headerAppender }
