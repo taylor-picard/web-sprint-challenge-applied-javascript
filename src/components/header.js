@@ -31,7 +31,8 @@ const Header = (title, date, temp) => {
 
 const headerAppender = (selector) => {
   const selElem = document.querySelector(selector);
-  
+  const newHeader = Header('Bloomtech', '4/24/23', '73');
+  selElem.appendChild(newHeader);
 }
   // TASK 2
   // ---------------------
