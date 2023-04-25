@@ -52,9 +52,9 @@ const cardAppender = (selector) => {
       const articlesObj = Object.values(response.data.articles);
       articlesObj.forEach(arr => {
         for(let i = 0; i < arr.length; i++){
-          document.querySelector(selector).appendChild(Card(i));
+          let newCard = document.querySelector(selector)
+          newCard.appendChild(Card(arr[i]));
         }
-       
       })
     })
     .catch(err => {
